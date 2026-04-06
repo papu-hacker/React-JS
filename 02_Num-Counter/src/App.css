@@ -1,0 +1,30 @@
+button:hover {
+    border: 1px solid #F472B6;
+    background-color: #2B2A33;
+}
+
+button:active {
+    border: 1px solid #F472B6;
+}
+
+button {
+    border-radius: 8px;
+    padding: 6px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-family: monospace;
+}
+
+.counter1 {
+    font-family: monospace;
+    color: #F472B6;
+}
+
+.counter {
+    font-family: monospace;
+    color: #50FA7B;
+}
+
+.head {
+    color: #C084FC;
+    font-family: monospace
+}
