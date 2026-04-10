@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState, useRef } from 'react'
 // import './App.css'
 
 function App() {
@@ -8,6 +8,9 @@ function App() {
   const [numAllow, setNumAllow] = useState(true)
   const [charAllow, setCharAllow] = useState(false)
   const [passwd, setPasswd] = useState('pass')
+
+  // useRef
+  const passwdRef = useRef(null)
 
   const passGen = useCallback(() => {
     let pass = ''
@@ -22,6 +25,13 @@ function App() {
     }
     setPasswd(pass)
   }, [length, numAllow, charAllow, setPasswd])
+
+  // for copy
+  const cpPasswd = useCallback(() => {
+    passwdRef.current?.select()
+    // passwdRef.current?.setSelectionRange(0,4) // only select from 0-4
+    window.navigator.clipboard.writeText(passwd)
+  }, [passwd])
 
   useEffect(() => {
     passGen()
@@ -59,15 +69,17 @@ function App() {
                 value={passwd}
                 readOnly
                 className="w-full px-4 py-3 bg-transparent outline-none"
+                ref={passwdRef}
               />
               <button
-                onClick={() => navigator.clipboard?.writeText(passwd)}
+                // onClick={() => navigator.clipboard?.writeText(passwd)}
+                onClick={cpPasswd}
                 className="bg-emerald-300 text-gray-900 px-3 py-3 hover:bg-emerald-400 active:bg-emerald-400 transition rounded-l-md font-extrabold"
               >
                 Copy
               </button>
               <button onClick={() => { change_pass() }}
-                className='p-3 bg-red-300 text-gray-900 px-3 py-3 hover:bg-orange-400 active:bg-orange-400 transition font-extrabold'>New</button>
+                className='p-3 bg-red-300 text-gray-900 px-4 py-3 hover:bg-orange-400 active:bg-orange-400 transition font-extrabold'>New</button>
             </div>
           </div>
 
@@ -76,7 +88,7 @@ function App() {
             <input
               type="range"
               min={4}
-              max={32}
+              max={36}
               value={length}
               onChange={(e) => setLength(Number(e.target.value))}
               className="w-full accent-purple-400 "
