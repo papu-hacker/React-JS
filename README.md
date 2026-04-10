@@ -29,6 +29,7 @@ bun add -d tailwindcss @tailwindcss/vite
 ```
 
 ```bash
+vit.config.js
 import { defineConfig } from 'vite' # already
 import react from '@vitejs/plugin-react' # already
 import tailwindcss from '@tailwindcss/vite' # new
@@ -42,5 +43,6 @@ export default defineConfig({
 ```
 
 ```bash
+index.css
 @import "tailwindcss"; # new
 ```
