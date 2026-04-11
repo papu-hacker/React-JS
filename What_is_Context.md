@@ -27,7 +27,8 @@ export default function App() {
       <Profile user={user} />
     </div>
   );
-}```
+}
+```
 
 ```jsx
 // Login.jsx
@@ -39,7 +40,8 @@ export default function Login({ onLogin }) {
     onLogin(userData);
   }
   return <button onClick={handleLogin}>Log in</button>;
-}```
+}
+```
 
 ```jsx
 // Profile.jsx
@@ -163,7 +165,8 @@ export default function App() {
       <Profile user={user} />
     </div>
   );
-}```
+}
+```
 
 ```jsx
 // Login.jsx
@@ -184,8 +187,9 @@ export default function Login({ onLogin }) {
       <button type="submit">Login</button>
     </form>
   );
-}```
-
+}
+```
+```jsx
 // Profile.jsx
 import React from "react";
 
@@ -210,7 +214,8 @@ When the tree is shallow this is fine; passing props becomes verbose if many nes
 ```jsx
 // authContext.js
 import React from "react";
-export const AuthContext = React.createContext(null);```
+export const AuthContext = React.createContext(null);
+```
 
 ```jsx
 // App.jsx
@@ -230,7 +235,8 @@ export default function App() {
       <Profile />
     </AuthContext.Provider>
   );
-}```
+}
+```
 
 ```jsx
 // LoginWithContext.jsx
@@ -252,7 +258,8 @@ export default function LoginWithContext() {
       <button type="submit">Login</button>
     </form>
   );
-}```
+}
+```
 
 ```jsx
 // ProfileWithContext.jsx
