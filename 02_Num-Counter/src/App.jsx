@@ -23,18 +23,18 @@ function App() {
 
   return (
     <>
-      <h1 class='head'>testing</h1>
-      <h2 class='head'>Counter Value: {counter}</h2>
+      {/* <h1 class='head'>testing</h1> */}
+      <h1 class='head'>Counter Value: {counter}</h1>
       <button onClick={addValue}>Add Value</button>
       <button onClick={removeValue}>Del Value</button>
 
-      <div >
-        <h1 class='counter1'>{counter}</h1>
-        <h2 class='counter'>{counter}</h2>
-        <h3 class='counter1'>{counter}</h3>
-        <h4 class='counter'>{counter}</h4>
-        <h5 class='counter1'>{counter}</h5>
-        <h6 class='counter'>{counter}</h6>
+      <div className='Result-div' >
+        <h1 className='counter1'> {counter} </h1>
+        <h1 className='counter'> {counter} </h1>
+        <h3 className='counter1'> {counter} </h3>
+        <h3 className='counter'> {counter} </h3>
+        {/* <h5 className='counter1'>{counter}</h5>
+        <h6 className='counter'>{counter}</h6> */}
       </div>
     </>
   )

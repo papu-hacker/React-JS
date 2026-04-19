@@ -10,21 +10,30 @@ button:active {
 button {
     border-radius: 8px;
     padding: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
     border: 1px solid rgba(0, 0, 0, 0);
-    font-family: monospace;
+    font: 20px monospace;
 }
 
 .counter1 {
     font-family: monospace;
     color: #F472B6;
+    margin-bottom: 50px;
 }
 
 .counter {
     font-family: monospace;
     color: #50FA7B;
+    margin-bottom: 50px;
 }
 
 .head {
     color: #C084FC;
-    font-family: monospace
+    font-family: monospace;
+    font-size: 3rem;
+}
+
+.Result-div{
+    font-size: 2rem;
 }
